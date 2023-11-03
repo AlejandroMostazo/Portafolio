@@ -1,0 +1,289 @@
+@font-face {
+  font-family: "Druk Wide Web";
+  src: url(./fonts/Druk\ Wide\ Web.ttf);
+}
+
+@font-face {
+  font-family: "akzidenz-grotesk";
+  src: url(./fonts/akzidenz-grotesk.otf);
+}
+
+html {
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+}
+h1, h2 {
+  font-family: Druk Wide Web;
+  margin: 0;
+  font-size: 2.5em;
+}
+
+#desarrollador {
+  width: 220px;
+  height: 320px;
+  top: -170px;
+  left: 150px;
+  border-bottom: none ;
+  border-right: none;
+}
+
+#desarrollador > p {
+  font-size: 20px;
+  position: absolute;
+  top: -35px;
+  left: 230px;
+  white-space: nowrap;
+  background-color: #10131A;
+}
+
+@media (max-width: 1050px) {
+  #desarrollador > p { 
+    font-size: 17px;
+    padding: 3px;
+    top: 54px;
+    left: -165px;
+    z-index: 3;
+  }
+}
+
+#boton {
+  top: 210px;
+  left: -70px;
+  background-color: #10131A;
+  color: #fff;
+  width: 150px;
+  border: 2px solid #fff;
+  z-index: 2;
+  cursor: pointer;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  white-space: nowrap;
+  text-indent: 15px;
+}
+
+#boton > p::after { 
+  content: 'DESCARGAR CV';
+  margin-left: 20px;
+}
+
+#boton:hover > p, #boton:hover > p::after {
+  animation: descargar 0.8s linear infinite;
+}
+
+@keyframes descargar {
+  from {
+
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-125px);
+  }
+}
+
+#tecnico {
+  width: 140px;
+  height: 270px;
+  top: -150px;
+  right: 150px;
+  border-top: none;
+  border-left: none;
+}
+
+#tecnico > p {
+  font-size: 20px;
+  position: absolute;
+  top: 237px;
+  right: 150px;
+  white-space: nowrap;
+  background-color: #10131A;
+}
+
+@media (max-width: 900px) {
+  #tecnico > p { 
+    font-size: 17px;
+    padding: 4px;
+    top: 200px;
+    left: 150px;
+    z-index: 2;
+    width: 100%;
+  }
+}
+
+
+
+h2 {
+  font-size: 50px;
+}
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+p, a, button {
+  font-family: "akzidenz-grotesk";
+}
+
+canvas {
+  position: absolute;
+  z-index: 0;
+  top: -400px;
+  left: -50px;
+}
+
+.App-header {
+  background-color: #10131A;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.geometria {
+  border: solid 3px #fff;
+  position: absolute;
+}
+
+#figuras {
+  position: absolute;
+  margin: auto;
+  z-index: 0;
+}
+
+#nombre {
+  background-color: #10131A;
+  z-index: 3;
+  padding: 10px 10px 0px 10px;
+}
+
+#circulo {
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  top: -220px;
+  left: -550px;
+  z-index: 1;
+}
+
+#circulo2 {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  top: -300px;
+  left: -400px;
+  border: dashed;
+  z-index: 0;
+}
+
+#circulo2::before {
+  content: "";
+  width: 200px;
+  height: 100%;
+  background-color: #10131A;
+  position: absolute;
+  left: -10px;
+
+}
+
+#rectangulom{
+  width: 800px;
+  border-top: none;
+  left: -400px;
+}
+
+#rectangulom::after {
+  content: "";
+  width: 80px;
+  border: 3px dashed #fff;
+  border-top: none;
+  position: absolute;
+  right: -75px;
+}
+
+#rectangulo{
+  height: 300px;
+  border: 3px dashed #fff;
+  border-right: none;
+  top: -150px;
+  left: 90px;
+}
+
+footer {
+  font-size: 14px;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  text-align: left;
+}
+
+footer > a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+
+footer > a::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, #fff 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.3s ease-out;
+}
+
+footer > a:hover::before {
+  background-position: 0;
+}
+
+
+.indent {
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+#info {
+  position: absolute;
+  top: 280px;
+  left: -83px;
+  display: flex;
+  font-size: medium;
+  align-items: center;
+}
+
+#info > a {
+  margin: 6px 10px 0px 20px;
+}
+
+#info svg:hover {
+    
+    color: #61dafb;
+    transform: scale(1.2);
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  footer {
+    left: 10px;
+  }
+}

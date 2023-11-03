@@ -1,0 +1,160 @@
+img {
+    width: 300px;
+}
+
+.edificios {
+    width: 400px !important;
+    margin: 50px 0 ;
+}
+
+#experiencia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#accenture {
+    display: block;
+    width: 500px;
+    height: 240px;
+    position: relative;
+    margin-top: 20px;
+    background-color: #10131A;
+    z-index: 2;
+}
+
+#accenture::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-top: dashed 3px #ffff ;
+    border-left: dashed 3px #ffff ;
+}
+
+#accenture::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 50%;
+    height: 100%;
+    border-bottom: solid 3px #ffff ;
+    border-right: solid 3px #ffff ;
+}
+
+#accenture > p {
+    font-family: "akzidenz-grotesk";
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 19px;
+}
+
+#emel {
+    width: 450px;
+    height: 200px;
+    position: relative;
+    background-color: #10131A;
+    z-index: 2;
+}
+
+#emel::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 70%;
+    height: 100%;
+    border-top: solid 3px #ffff ;
+    border-left: solid 3px #ffff ;
+}
+
+#emel::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-bottom: dashed 3px #ffff ;
+    border-right: dashed 3px #ffff ;
+}
+
+#emel > p {
+    font-family: "akzidenz-grotesk";
+    margin: 0;
+    padding: 13px 20px;
+    font-size: 19px;
+}
+
+#timeline {
+    border-right: 3px solid #ffff;
+    padding: 5vh 200px 5vh 0px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgempresas {
+    z-index: 2;
+}
+
+#cirlce {
+    width: 300px ;
+    height: 300px;
+    border: dashed 3px #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: 50px;
+    right: 200px;
+    z-index: 1;
+}
+
+#line {
+    height: 400px;
+    border-left: solid 3px #fff;
+    position: absolute;
+    top: 450px;
+    right: 550px;
+    z-index: 1;
+}
+
+@media (max-width: 1300px) {
+    #imgempresas {
+        display: none;
+    }
+    #timeline {
+        padding: 5vh 100px 5vh 0px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    html {
+        overflow-y: visible;
+    }
+
+    #accenture {
+        display: block;
+        width: 250px;
+        height: fit-content;
+    }
+    
+    #emel {
+        width: 250px;
+        height: fit-content;
+    }
+    img {
+        width: 150px;
+        margin-top: 30px;
+    }
+    #timeline {
+        padding: 5vh 50px 5vh 10px;
+        margin-right: 0px;
+    }
+}

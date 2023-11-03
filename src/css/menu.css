@@ -1,0 +1,200 @@
+#home {
+  position: fixed;
+  top: 25px;
+  left: 35px;
+  text-align: left;
+  z-index: 7;
+}
+
+#m {
+  text-indent: 40px;
+  margin-top: -10px;
+}
+
+#bolas {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  top: 37px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 6;
+}
+
+#menu::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 100px;
+  transition: transform 0.5s;
+}
+
+#menu {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 67px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.5s;
+}
+
+#menu:hover {
+  transition: 0.5s;
+  width: 78px;
+  margin: 0 37px;
+  border-radius: 10px;
+}
+
+.menu-active {
+  margin: 0 37px !important;
+  position: absolute;
+  top: -100px;
+}
+
+.menu-active::after {
+  width: 78px !important;
+  border-radius: 10px !important;
+  transform: rotate(-45deg);
+  top: 100px !important;
+  right: 0px !important;
+}
+
+.menu-active::before {
+  width: 78px !important;
+  border-radius: 10px !important;
+  transform: rotate(45deg) !important;
+  top: 100px !important;
+  right: 0px !important;
+}
+
+
+#menu::after {
+  transition: transform 0.5s;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  position: absolute;
+  border-radius: 50%;
+  right: 35px;
+}
+
+#contenedor {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  transition: 2s;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 0;
+  transition: opacity 1s;
+}
+
+a > h1{
+  position: relative;
+}
+
+a > h1::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: -5%;
+  right: 100%;
+  width: 0%;
+  height: 12%;
+  background: #c4c4c4;
+  transform-origin: left;
+  transition: width 0.3s;
+}
+
+a:hover > h1::before {
+  width: 110%;
+}
+
+
+#animacion {
+  position: absolute;
+  right: 72px;
+  top: 42px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(1);
+  background-color: #2b2d33f1;
+  z-index: 4;
+  transition: all 1.5s;
+}
+
+.animacion-active {
+  transform: scale(410) !important;
+}
+
+#contenedor > a {
+  margin: 10px 0 ;
+}
+
+@media (max-width: 600px) {
+  #contenedor > a > h1 {
+    font-size: 1.4em !important;
+  }
+}
+
+@media (max-width: 720px) { 
+  #home {
+    left: 20px;
+  }
+  #m {
+    text-indent: 25px;
+    margin-top: -5px;
+  }
+  #menu::before {
+    width: 15px;
+    height: 15px;
+    right: 85px;
+  }
+  
+  #menu {
+    width: 15px;
+    height: 15px;
+    margin: 0 60px;
+  }
+  
+  #menu:hover {
+    transition: 0.5s;
+    width: 62px;
+    margin: 0 37px;
+    border-radius: 10px;
+  }
+
+  .menu-active {
+    width: 62px !important;
+    margin: 0 37px !important;
+    border-radius: 10px !important;
+  }
+
+  .menu-active::after {
+    width: 62px !important;
+  }
+  
+  .menu-active::before {
+    width: 62px !important;
+  }
+
+  #menu::after {
+    width: 15px;
+    height: 15px;
+    right: 35px;
+  }
+  #animacion {
+    right: 62px;
+  }
+}
