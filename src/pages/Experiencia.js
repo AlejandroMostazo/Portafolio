@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import '../App.css';
 import '../css/experiencia.css';
-import '../particles.min';
-import particlesConfig from '../particlesjs-config.json';
 import Accenture from '../images/Accenture.png';
 import Emel from '../images/emel.png';
 import AccentureM from '../images/accenturemalaga.png';
@@ -10,9 +8,6 @@ import EmelL from '../images/emellisboa.png';
 
 
 function Experiencia() {
-  useEffect(() => {
-    window.particlesJS('particles-js', particlesConfig);
-  }, []);
 
   return (
       <header id="particles-js" className="App-header">
