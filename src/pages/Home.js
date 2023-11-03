@@ -1,13 +1,9 @@
 import React, {useEffect} from 'react';
 import '../App.css';
-import '../particles.min';
-import particlesConfig from '../particlesjs-config.json';
 
 function Home() {
 
   useEffect(() => {
-
-    window.particlesJS('particles-js', particlesConfig);
 
 
     const canvas = document.getElementById('triangulo');
