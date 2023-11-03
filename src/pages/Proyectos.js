@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../App.css';
-import '../particles.min';
 import particlesConfig from '../particlesjs-config.json';
 import Navbar from '../Navbar';
 
 function Experiencia() {
-  useEffect(() => {
-    window.particlesJS('particles-js', particlesConfig);
-  }, []);
 
   return (
     <div className="App">
